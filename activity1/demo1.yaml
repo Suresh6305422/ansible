@@ -1,0 +1,11 @@
+---
+name: playbook
+become: yes
+hosts: all
+tasks: 
+  - name: install apache
+    ansible.builtin.apt:
+      name:
+        - apache2
+      state: present
+      update_cache: yes
